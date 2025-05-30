@@ -106,8 +106,8 @@ img {
 }
 
 .section-padding {
-  padding-top: 140px;
-  padding-bottom: 140px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .theme-shadow {
@@ -198,6 +198,10 @@ HEADER
 }
 .header-atas{
   background-color: #F05737;
+}
+
+.header-atas h6 {
+  font-size: 18px;
 }
 
 /* ========================================
@@ -423,17 +427,12 @@ HERO
   margin-bottom: 25px;
   overflow: hidden;
 }
-#hero.section-padding {
-  padding: 50px 0px;
-} 
 .hero .hero-image {
   position: relative;
-  text-align: right;
   margin-bottom: 2.5rem;
-}
-.hero .hero-image img {
-  max-width: 80%;
-  max-height: 80%;
+  max-width: 85%;
+  max-height: 85%;
+  justify-self: right;
 }
 .hero .hero-content {
   position: relative;
@@ -478,6 +477,11 @@ HERO
   font-size: 18.5px;
   font-weight: 300;
   line-height: 1.7rem;
+  margin-right: 140px;
+}
+.hero .hero-text h2 b{
+  color: var(--c-brand);
+  font-weight: 600;
 }
 
 /* ========================================
@@ -1211,7 +1215,7 @@ APPLY / GABUNG JADI TENTOR
 FOOTER
 ======================================== */
 footer {
-    padding-top: 120px;
+    padding-top: 50px;
 }
 .footer-top {
     margin-inline: 1rem;
@@ -1277,11 +1281,6 @@ BREAKPOINTS
     padding: 7px 0px;
   }
 
-  /* HERO */
-  #hero img {
-    min-width: 100%;
-  }
-
   /* TENTANG */
   #tentang img {
     min-width: 80%;
@@ -1312,9 +1311,6 @@ BREAKPOINTS
   }
 
   /* HERO */
-  #hero img {
-    min-width: 100%;
-  }
   .hero .hero-content .textContainer,
   .hero .hero-content .textContainer .text,
   .hero .hero-content .textContainer .text2 {
@@ -1407,8 +1403,8 @@ BREAKPOINTS
   }
 
   /* HERO */
-  #hero img {
-    min-width: 380px;
+  .hero .hero-image {
+    max-width: 85%;
   }
   .hero .hero-content .textContainer,
   .hero .hero-content .textContainer .text,
@@ -1527,13 +1523,16 @@ BREAKPOINTS
     font-size: 45px;
   }
   .hero .hero-text h2 {
-    font-size: 25px;
+    font-size: 18px;
     height: 25px;
+    margin-right: 80px;
+    text-align: left;
   }
   .hero .hero-btn .btn {
     padding: 12px 30px;
     letter-spacing: 1px;
   }
+
   /* KEUNGGULAN */
   .keunggulan {
     position: relative;
@@ -1581,14 +1580,16 @@ BREAKPOINTS
       text-align: center;
   }
   .hero .hero-text p {
-      font-size: 18px;
+      font-size: 20px;
   }
   .hero .hero-text h1 {
       font-size: 35px;
   }
   .hero .hero-text h2 {
-      font-size: 22px;
+      font-size: 20px;
       height: 22px;
+      margin: 0px 30px;
+      text-align: center;
   }
   .hero .hero-btn .btn {
       padding: 10px 15px;
@@ -1611,14 +1612,14 @@ BREAKPOINTS
 @media (max-width: 575.98px) {
    /* HERO  */
   .hero .hero-text p {
-    font-size: 25.5px;
+    font-size: 28px;
     line-height: 5px;
   }
   .hero .hero-text h1 {
     font-size: 30px;
   }
   .hero .hero-text h2 {
-    font-size: 15px;
+    font-size: 18px;
     line-height: 25px;
   }
   .hero .hero-text h2 a {
