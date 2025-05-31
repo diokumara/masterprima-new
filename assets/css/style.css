@@ -336,24 +336,6 @@ WA FLOATING BUTTON V2
     animation: float 3s ease-in-out infinite;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .floating-whatsapp {
-        bottom: 20px;
-        left: 20px;
-    }    
-    .whatsapp-button {
-        width: 50px;
-        height: 50px;
-    }
-    .floating-whatsapp i {
-        font-size: 40px;
-  }
-    .whatsapp-tooltip {
-        display: none;
-    }
-}
-
 /* ========================================
 SCROLL TO TOP BUTTON
 ======================================== */
@@ -404,19 +386,6 @@ SCROLL TO TOP BUTTON
     .scroll-to-top.visible {
         animation: float 3s ease-in-out infinite;
     }
-
-/* Animasi untuk mobile */
-@media (max-width: 768px) {
-    .scroll-to-top {
-        width: 30px;
-        height: 30px;
-        bottom: 20px;
-        right: 20px;
-    }
-     .scroll-to-top i {
-        font-size: 20px;
-  }
-}
 
 /* ========================================
 HERO
@@ -679,38 +648,6 @@ TIMELINE (PERJALANAN KAMU MENJADI ASN)
     .timeline-body > p + p {
         margin-top: 5px;
     }
-@media (max-width: 767px) {
-    ul.timeline:before {  /*garis Timeline*/
-        left: 40px;
-    }
-    ul.timeline > li > .timeline-panel {
-        width: calc(100% - 90px);
-        width: -moz-calc(100% - 90px);
-        width: -webkit-calc(100% - 90px);
-    }
-    ul.timeline > li > .timeline-badge {  /*icon badge*/
-      zoom: normal;  
-      left: 15px;
-        margin-left: 0;
-        top: 16px;
-    }
-    ul.timeline > li > .timeline-panel {  /*card / isi timeline*/
-        float: right;
-        background: linear-gradient(105deg, rgb(255, 255, 255) 0%, rgb(235, 235, 235) 100%);
-    }
-        ul.timeline > li > .timeline-panel:before {   /*segitiga untuk card*/
-            border-left-width: 0;
-            border-right-width: 15px;
-            left: -15px;
-            right: auto;
-        }
-        ul.timeline > li > .timeline-panel:after {    /*segitiga untuk card*/
-            border-left-width: 0;
-            border-right-width: 14px;
-            left: -14px;
-            right: auto;
-        }
-}
 
 /* ========================================
 VIDEO PROFIL
@@ -942,15 +879,6 @@ REVIEW / TESTIMONI
 }
 .swiper-pagination-bullet-active{
   background-color: #4070F4;
-}
-
-@media screen and (max-width: 768px) {
-  .slide-content{
-    margin: 0 10px;
-  }
-  .swiper-navBtn{
-    display: none;
-  }
 }
 
 /* ========================================
@@ -1226,7 +1154,7 @@ footer .line {
 }
 
 /* ============================================================
-BREAKPOINTS 
+BREAKPOINTS / VIEWPORTS
 ============================================================ */
 @media screen and (min-width: 250px) {
   /* HEADER */
@@ -1533,7 +1461,7 @@ BREAKPOINTS
   }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
   /* HERO  */
   .hero,
   .hero .hero-text,
@@ -1557,11 +1485,45 @@ BREAKPOINTS
       padding: 10px 15px;
       letter-spacing: 1px;
   }
+
+  /* TYPING TEXT */
   .typing-container {
     display: flex;
     justify-content: center;
     text-align: center;
-}
+  }
+
+  ul.timeline:before {  /*garis Timeline*/
+    left: 40px;
+  }
+  ul.timeline > li > .timeline-panel {
+    width: calc(100% - 90px);
+    width: -moz-calc(100% - 90px);
+    width: -webkit-calc(100% - 90px);
+  }
+  ul.timeline > li > .timeline-badge {  /*icon badge*/
+    zoom: normal;  
+    left: 15px;
+    margin-left: 0;
+    top: 16px;
+  }
+  ul.timeline > li > .timeline-panel {  /*card / isi timeline*/
+    float: right;
+    background: linear-gradient(105deg, rgb(255, 255, 255) 0%, rgb(235, 235, 235) 100%);
+  }
+        ul.timeline > li > .timeline-panel:before {   /*segitiga untuk card*/
+            border-left-width: 0;
+            border-right-width: 15px;
+            left: -15px;
+            right: auto;
+        }
+        ul.timeline > li > .timeline-panel:after {    /*segitiga untuk card*/
+            border-left-width: 0;
+            border-right-width: 14px;
+            left: -14px;
+            right: auto;
+        }
+
 
   /* KEUNGGULAN  */
   #keunggulan .phone-image {
@@ -1573,6 +1535,41 @@ BREAKPOINTS
   #keunggulan .services .item  {
     min-width: 490px;
     justify-self: center;
+  }
+
+  /* FLOATING WA BUTTON */
+  .floating-whatsapp {
+      bottom: 20px;
+      left: 20px;
+    }    
+  .whatsapp-button {
+      width: 50px;
+      height: 50px;
+    }
+  .floating-whatsapp i {
+      font-size: 40px;
+  }
+  .whatsapp-tooltip {
+      display: none;
+    }
+
+  /* SCROLL TO TOP */
+  .scroll-to-top {
+      width: 30px;
+      height: 30px;
+      bottom: 20px;
+      right: 20px;
+    }
+  .scroll-to-top i {
+      font-size: 20px;
+    }
+
+  /* SLIDER (REVIEW / TESTIMONI) */
+  .slide-content{
+    margin: 0 10px;
+  }
+  .swiper-navBtn{
+    display: none;
   }
 }
 
