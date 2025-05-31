@@ -677,18 +677,15 @@ VIDEO PROFIL
 KEUNGGULAN
 ======================================== */
 #keunggulan h1 {
-    font-size: 39px;
-  }
-  #keunggulan h2 b {
-    color: var(--c-brand-blue);
-  }
-  #keunggulan h2 {
-    padding: 0px 8px;
-    font-size: larger;
-    color: var(--c-brand);
-  }
-.keunggulan {
-  padding: 140px 0px 120px 0px;
+  font-size: 39px;
+}
+#keunggulan h2 b {
+  color: var(--c-brand-blue);
+}
+#keunggulan h2 {
+  padding: 0px 8px;
+  font-size: larger;
+  color: var(--c-brand);
 }
 #keunggulan .phone-image {
   max-width: 75%;
@@ -697,14 +694,39 @@ KEUNGGULAN
 #keunggulan .services .item {
   margin-bottom: 30px;
 }
-#keunggulan .services .item .icon {
-  float: left;
-  margin-right: 25px;
+
+#keunggulan .services .item .icon-badge {
+    position: relative;  
+    color: var(--c-brand-white);
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    font-size: 40px;
+    text-align: center;
+    left: 5%;
+    margin-left: -25px;
+    background-color: #999999;
+    border-radius: 50%;
 }
-#keunggulan .services .item .icon img {
-  max-width: 70px;
-  padding-bottom: 100px;
+
+#keunggulan .services .item .icon-badge.orange {
+    background-color: #F05737 !important;
 }
+#keunggulan .services .item .icon-badge.blue {
+    background-color: #17B1FF !important;
+}
+#keunggulan .services .item .icon-badge.yellow {
+    background-color: #FFCC2B !important;
+}
+
+#keunggulan .services .item .right-text {
+  margin-left: 90px;
+  position: relative;
+  margin-bottom: -40px;
+  top: -65px;
+  padding-right: 30px;
+}
+
 #keunggulan .services .item h4 {
   color: var(--c-body);
   font-size: 20px;
@@ -713,6 +735,7 @@ KEUNGGULAN
 }
 #keunggulan .services .item p {
   color: var(--c-body-2);
+  text-align: justify;
 }
 
 /* ========================================
@@ -1200,13 +1223,6 @@ BREAKPOINTS / VIEWPORTS
     padding: 2px 20px;
   }
 
-  /* HERO */
-  .hero .hero-content .textContainer,
-  .hero .hero-content .textContainer .text,
-  .hero .hero-content .textContainer .text2 {
-    justify-self: center;
-  }
-
   /* TENTANG */
   #tentang img {
     min-width: 80%;
@@ -1296,12 +1312,6 @@ BREAKPOINTS / VIEWPORTS
   .hero .hero-image {
     max-width: 100%;
   }
-  .hero .hero-content .textContainer,
-  .hero .hero-content .textContainer .text,
-  .hero .hero-content .textContainer .text2 {
-    text-align: left;
-    justify-content: left;
-  }
 
   /* TENTANG */
   #tentang img {
@@ -1342,12 +1352,6 @@ BREAKPOINTS / VIEWPORTS
   }
   .navbar-nav .nav-link.menu {
     margin: 10px 10px;
-  }
-
-  .hero .hero-content .textContainer,
-  .hero .hero-content .textContainer .text,
-  .hero .hero-content .textContainer .text2 {
-    justify-self: left;
   }
 
   /* TIMELINE (PERJALANAN MENJADI ASN) */
@@ -1441,9 +1445,6 @@ BREAKPOINTS / VIEWPORTS
     justify-self: center;
     margin-bottom: 5rem;
   }
-  #keunggulan .services .item .icon img {
-  padding-bottom: 20px;
-  }
   #keunggulan .services {
     text-align: center;
   }
@@ -1456,7 +1457,9 @@ BREAKPOINTS / VIEWPORTS
     display: inline-block;
     justify-self: center;
   }
-  #keunggulan .services .item .right-text {
+   #keunggulan .services .item .right-text {
+    margin-left: 20%;
+    top: -70px;
     text-align: left;
   }
 }
@@ -1524,17 +1527,17 @@ BREAKPOINTS / VIEWPORTS
             right: auto;
         }
 
-
   /* KEUNGGULAN  */
   #keunggulan .phone-image {
     bottom: -280px;
   }
-  #keunggulan .services .item .icon img {
-  padding-bottom: 35px;
-  }
   #keunggulan .services .item  {
     min-width: 490px;
     justify-self: center;
+  }
+  #keunggulan .services .item .right-text {
+    margin-left: 20%;
+    top: -70px;
   }
 
   /* FLOATING WA BUTTON */
@@ -1594,12 +1597,6 @@ BREAKPOINTS / VIEWPORTS
     letter-spacing: 0;
   }
 
-  .hero .hero-content .textContainer,
-  .hero .hero-content .textContainer .text,
-  .hero .hero-content .textContainer .text2 {
-    justify-self: center;
-  }
-
   /* PROFIL VIDEO */
   #profil iframe {
     box-shadow: 5px 3px 5px var(--c-brand-secondary), -5px 5px 5px var(--c-brand);
@@ -1620,27 +1617,44 @@ BREAKPOINTS / VIEWPORTS
   #keunggulan .phone-image {
     max-width: 50%;
   }
-  #keunggulan .services .item .icon img {
-  padding-bottom: 90px;
-  }
   #keunggulan .services .item  {
     min-width: auto;
     justify-self: center;
   }
+  #keunggulan .services .item .icon-badge {
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      font-size: 30px;
+      left: 7%;
+    }
+  #keunggulan .services .item .right-text {
+    margin-left: 20%;
+    top: -50px;
+  }
 }
 
 @media (max-width: 350px) {
-  /* NAVBAR */
-  .navbar {
-    /* margin: 0px -3px; */
-    box-shadow: var(--box-shadow);
-}
-
-/* KEUNGGULAN */
-  #keunggulan .services .item .icon img {
-  padding-bottom: 170px;
+    /* NAVBAR */
+    .navbar {
+      box-shadow: var(--box-shadow);
   }
-  #keunggulan .services .item h4 {
-  font-size: 18.5px;
+
+  /* KEUNGGULAN */
+    #keunggulan .services .item .icon-badge {
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      font-size: 30px;
+      left: 7%;
+    }
+    
+    #keunggulan .services .item h4 {
+    font-size: 18.5px;
+    }
+
+    #keunggulan .services .item .right-text {
+    margin-left: 70px;
+    top: -50px;
   }
 }
