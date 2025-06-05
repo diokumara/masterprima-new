@@ -336,24 +336,6 @@ WA FLOATING BUTTON V2
     animation: float 3s ease-in-out infinite;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .floating-whatsapp {
-        bottom: 20px;
-        left: 20px;
-    }    
-    .whatsapp-button {
-        width: 50px;
-        height: 50px;
-    }
-    .floating-whatsapp i {
-        font-size: 40px;
-  }
-    .whatsapp-tooltip {
-        display: none;
-    }
-}
-
 /* ========================================
 SCROLL TO TOP BUTTON
 ======================================== */
@@ -404,19 +386,6 @@ SCROLL TO TOP BUTTON
     .scroll-to-top.visible {
         animation: float 3s ease-in-out infinite;
     }
-
-/* Animasi untuk mobile */
-@media (max-width: 768px) {
-    .scroll-to-top {
-        width: 30px;
-        height: 30px;
-        bottom: 20px;
-        right: 20px;
-    }
-     .scroll-to-top i {
-        font-size: 20px;
-  }
-}
 
 /* ========================================
 HERO
@@ -679,38 +648,6 @@ TIMELINE (PERJALANAN KAMU MENJADI ASN)
     .timeline-body > p + p {
         margin-top: 5px;
     }
-@media (max-width: 767px) {
-    ul.timeline:before {  /*garis Timeline*/
-        left: 40px;
-    }
-    ul.timeline > li > .timeline-panel {
-        width: calc(100% - 90px);
-        width: -moz-calc(100% - 90px);
-        width: -webkit-calc(100% - 90px);
-    }
-    ul.timeline > li > .timeline-badge {  /*icon badge*/
-      zoom: normal;  
-      left: 15px;
-        margin-left: 0;
-        top: 16px;
-    }
-    ul.timeline > li > .timeline-panel {  /*card / isi timeline*/
-        float: right;
-        background: linear-gradient(105deg, rgb(255, 255, 255) 0%, rgb(235, 235, 235) 100%);
-    }
-        ul.timeline > li > .timeline-panel:before {   /*segitiga untuk card*/
-            border-left-width: 0;
-            border-right-width: 15px;
-            left: -15px;
-            right: auto;
-        }
-        ul.timeline > li > .timeline-panel:after {    /*segitiga untuk card*/
-            border-left-width: 0;
-            border-right-width: 14px;
-            left: -14px;
-            right: auto;
-        }
-}
 
 /* ========================================
 VIDEO PROFIL
@@ -740,18 +677,15 @@ VIDEO PROFIL
 KEUNGGULAN
 ======================================== */
 #keunggulan h1 {
-    font-size: 39px;
-  }
-  #keunggulan h2 b {
-    color: var(--c-brand-blue);
-  }
-  #keunggulan h2 {
-    padding: 0px 8px;
-    font-size: larger;
-    color: var(--c-brand);
-  }
-.keunggulan {
-  padding: 140px 0px 120px 0px;
+  font-size: 39px;
+}
+#keunggulan h2 b {
+  color: var(--c-brand-blue);
+}
+#keunggulan h2 {
+  padding: 0px 8px;
+  font-size: larger;
+  color: var(--c-brand);
 }
 #keunggulan .phone-image {
   max-width: 75%;
@@ -760,14 +694,39 @@ KEUNGGULAN
 #keunggulan .services .item {
   margin-bottom: 30px;
 }
-#keunggulan .services .item .icon {
-  float: left;
-  margin-right: 25px;
+
+#keunggulan .services .item .icon-badge {
+    position: relative;  
+    color: var(--c-brand-white);
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    font-size: 40px;
+    text-align: center;
+    left: 5%;
+    margin-left: -25px;
+    background-color: #999999;
+    border-radius: 50%;
 }
-#keunggulan .services .item .icon img {
-  max-width: 70px;
-  padding-bottom: 100px;
+
+#keunggulan .services .item .icon-badge.orange {
+    background-color: #F05737 !important;
 }
+#keunggulan .services .item .icon-badge.blue {
+    background-color: #17B1FF !important;
+}
+#keunggulan .services .item .icon-badge.yellow {
+    background-color: #FFCC2B !important;
+}
+
+#keunggulan .services .item .right-text {
+  margin-left: 90px;
+  position: relative;
+  margin-bottom: -40px;
+  top: -65px;
+  padding-right: 30px;
+}
+
 #keunggulan .services .item h4 {
   color: var(--c-body);
   font-size: 20px;
@@ -776,6 +735,7 @@ KEUNGGULAN
 }
 #keunggulan .services .item p {
   color: var(--c-body-2);
+  text-align: justify;
 }
 
 /* ========================================
@@ -942,15 +902,6 @@ REVIEW / TESTIMONI
 }
 .swiper-pagination-bullet-active{
   background-color: #4070F4;
-}
-
-@media screen and (max-width: 768px) {
-  .slide-content{
-    margin: 0 10px;
-  }
-  .swiper-navBtn{
-    display: none;
-  }
 }
 
 /* ========================================
@@ -1153,24 +1104,92 @@ PAKET (CARD / ISI)
 }
 
 /* ========================================
-APPLY / GABUNG JADI TENTOR
+PERTANYAAN / GABUNG JADI TENTOR
 ======================================== */
-#apply h1 b {
+#pertanyaan h1 b {
   color: var(--c-brand-blue)
 }
-#apply h2 {
+#pertanyaan h2 {
   font-size: medium;
   color: var(--c-brand);
 }
-#apply img {
+#pertanyaan img {
   object-fit: cover;
   max-width: 70%;
   margin-bottom: 15px;
   margin-inline: 1rem;
 }
-#apply p {
+#pertanyaan p {
   margin-inline: 1rem;
   text-align: justify;
+}
+
+/* FAQ */
+.faq-container h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+/* FAQ Item Styles */
+.faq-item {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+.faq-question {
+    padding: 15px 20px;
+    background: var(--c-brand);
+    color: var(--c-brand-white);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s ease;
+}
+.faq-question:hover {
+    background: var(--c-brand-white);
+    color: var(--c-brand-blue);
+}
+.faq-question h3 {
+    margin: 0;
+    font-size: 16px;
+    color: var(--c-brand-white);
+}
+.faq-question:hover h3 {
+    color: var(--c-brand-blue);
+}
+.toggle-icon {
+    font-size: 20px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+.faq-answer {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+.faq-answer p {
+    font-size: 15px;  
+    padding: 0 20px;
+    margin: 15px 0;
+}
+
+/* Active State */
+.faq-item.active .faq-question {
+    background: var(--c-brand-blue);
+}
+.faq-item.active .faq-question:hover {
+    background: var(--c-brand-white);
+}
+.faq-item.active .toggle-icon {
+    transform: rotate(180deg);
+}
+.faq-item.active .faq-answer {
+    max-height: 300px;
+    padding: 0 0 15px 0;
 }
 
 /* ========================================
@@ -1226,7 +1245,7 @@ footer .line {
 }
 
 /* ============================================================
-BREAKPOINTS 
+BREAKPOINTS / VIEWPORTS
 ============================================================ */
 @media screen and (min-width: 250px) {
   /* HEADER */
@@ -1248,8 +1267,8 @@ BREAKPOINTS
     min-width: 80%;
   }
 
-  /* APPLY */
-  #apply img {
+  /* PERTANYAAN */
+  #pertanyaan img {
     object-fit: cover;
     min-width: 90%;
     margin-bottom: 15px;
@@ -1270,13 +1289,6 @@ BREAKPOINTS
   /* BUTTON */
   .btn-brand {
     padding: 2px 20px;
-  }
-
-  /* HERO */
-  .hero .hero-content .textContainer,
-  .hero .hero-content .textContainer .text,
-  .hero .hero-content .textContainer .text2 {
-    justify-self: center;
   }
 
   /* TENTANG */
@@ -1308,14 +1320,14 @@ BREAKPOINTS
     font-size: larger;
   }
 
-  /* APPLY */
-  #apply img {
+  /* PERTANYAAN */
+  #pertanyaan img {
     object-fit: cover;
     min-width: 90%;
     margin-bottom: 15px;
     margin-inline: 1rem;
   }
-  #apply h2 {
+  #pertanyaan h2 {
     font-size: larger;
   }
 }
@@ -1368,12 +1380,6 @@ BREAKPOINTS
   .hero .hero-image {
     max-width: 100%;
   }
-  .hero .hero-content .textContainer,
-  .hero .hero-content .textContainer .text,
-  .hero .hero-content .textContainer .text2 {
-    text-align: left;
-    justify-content: left;
-  }
 
   /* TENTANG */
   #tentang img {
@@ -1392,8 +1398,8 @@ BREAKPOINTS
             top: 10px;
         }
 
-  /* APPLY */
-  #apply img {
+  /* PERTANYAAN */
+  #pertanyaan img {
     object-fit: cover;
     min-width: 500px;
     margin-bottom: 15px;
@@ -1414,12 +1420,6 @@ BREAKPOINTS
   }
   .navbar-nav .nav-link.menu {
     margin: 10px 10px;
-  }
-
-  .hero .hero-content .textContainer,
-  .hero .hero-content .textContainer .text,
-  .hero .hero-content .textContainer .text2 {
-    justify-self: left;
   }
 
   /* TIMELINE (PERJALANAN MENJADI ASN) */
@@ -1513,9 +1513,6 @@ BREAKPOINTS
     justify-self: center;
     margin-bottom: 5rem;
   }
-  #keunggulan .services .item .icon img {
-  padding-bottom: 20px;
-  }
   #keunggulan .services {
     text-align: center;
   }
@@ -1528,12 +1525,14 @@ BREAKPOINTS
     display: inline-block;
     justify-self: center;
   }
-  #keunggulan .services .item .right-text {
+   #keunggulan .services .item .right-text {
+    margin-left: 20%;
+    top: -70px;
     text-align: left;
   }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
   /* HERO  */
   .hero,
   .hero .hero-text,
@@ -1557,22 +1556,91 @@ BREAKPOINTS
       padding: 10px 15px;
       letter-spacing: 1px;
   }
+
+  /* TYPING TEXT */
   .typing-container {
     display: flex;
     justify-content: center;
     text-align: center;
-}
+  }
+
+  ul.timeline:before {  /*garis Timeline*/
+    left: 40px;
+  }
+  ul.timeline > li > .timeline-panel {
+    width: calc(100% - 90px);
+    width: -moz-calc(100% - 90px);
+    width: -webkit-calc(100% - 90px);
+  }
+  ul.timeline > li > .timeline-badge {  /*icon badge*/
+    zoom: normal;  
+    left: 15px;
+    margin-left: 0;
+    top: 16px;
+  }
+  ul.timeline > li > .timeline-panel {  /*card / isi timeline*/
+    float: right;
+    background: linear-gradient(105deg, rgb(255, 255, 255) 0%, rgb(235, 235, 235) 100%);
+  }
+        ul.timeline > li > .timeline-panel:before {   /*segitiga untuk card*/
+            border-left-width: 0;
+            border-right-width: 15px;
+            left: -15px;
+            right: auto;
+        }
+        ul.timeline > li > .timeline-panel:after {    /*segitiga untuk card*/
+            border-left-width: 0;
+            border-right-width: 14px;
+            left: -14px;
+            right: auto;
+        }
 
   /* KEUNGGULAN  */
   #keunggulan .phone-image {
     bottom: -280px;
   }
-  #keunggulan .services .item .icon img {
-  padding-bottom: 35px;
-  }
   #keunggulan .services .item  {
     min-width: 490px;
     justify-self: center;
+  }
+  #keunggulan .services .item .right-text {
+    margin-left: 20%;
+    top: -70px;
+  }
+
+  /* FLOATING WA BUTTON */
+  .floating-whatsapp {
+      bottom: 20px;
+      left: 20px;
+    }    
+  .whatsapp-button {
+      width: 50px;
+      height: 50px;
+    }
+  .floating-whatsapp i {
+      font-size: 40px;
+  }
+  .whatsapp-tooltip {
+      display: none;
+    }
+
+  /* SCROLL TO TOP */
+  .scroll-to-top {
+      width: 30px;
+      height: 30px;
+      bottom: 20px;
+      right: 20px;
+    }
+  .scroll-to-top i {
+      font-size: 20px;
+    }
+
+  /* SLIDER (REVIEW / TESTIMONI) */
+  .slide-content{
+    margin: 0 10px;
+  }
+  .swiper-navBtn{
+    display: none;
   }
 }
 
@@ -1597,12 +1665,6 @@ BREAKPOINTS
     letter-spacing: 0;
   }
 
-  .hero .hero-content .textContainer,
-  .hero .hero-content .textContainer .text,
-  .hero .hero-content .textContainer .text2 {
-    justify-self: center;
-  }
-
   /* PROFIL VIDEO */
   #profil iframe {
     box-shadow: 5px 3px 5px var(--c-brand-secondary), -5px 5px 5px var(--c-brand);
@@ -1623,27 +1685,44 @@ BREAKPOINTS
   #keunggulan .phone-image {
     max-width: 50%;
   }
-  #keunggulan .services .item .icon img {
-  padding-bottom: 90px;
-  }
   #keunggulan .services .item  {
     min-width: auto;
     justify-self: center;
   }
+  #keunggulan .services .item .icon-badge {
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      font-size: 30px;
+      left: 7%;
+    }
+  #keunggulan .services .item .right-text {
+    margin-left: 20%;
+    top: -50px;
+  }
 }
 
 @media (max-width: 350px) {
-  /* NAVBAR */
-  .navbar {
-    /* margin: 0px -3px; */
-    box-shadow: var(--box-shadow);
-}
-
-/* KEUNGGULAN */
-  #keunggulan .services .item .icon img {
-  padding-bottom: 170px;
+    /* NAVBAR */
+    .navbar {
+      box-shadow: var(--box-shadow);
   }
-  #keunggulan .services .item h4 {
-  font-size: 18.5px;
+
+  /* KEUNGGULAN */
+    #keunggulan .services .item .icon-badge {
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      font-size: 30px;
+      left: 7%;
+    }
+    
+    #keunggulan .services .item h4 {
+    font-size: 18.5px;
+    }
+
+    #keunggulan .services .item .right-text {
+    margin-left: 70px;
+    top: -50px;
   }
 }

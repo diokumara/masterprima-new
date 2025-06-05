@@ -52,20 +52,20 @@ document.addEventListener('DOMContentLoaded', function() {
 // ========================================================================= //
 //  PORTFOLIO ISOTOPE AND FILTER
 // ========================================================================= //
-$(window).load(function(){
+// $(window).load(function(){
 
-  var portfolioIsotope = $('.portfolio-container').isotope({
-    itemSelector: '.portfolio-thumbnail',
-    layoutMode: 'fitRows'
-  });
+//   var portfolioIsotope = $('.portfolio-container').isotope({
+//     itemSelector: '.portfolio-thumbnail',
+//     layoutMode: 'fitRows'
+//   });
 
-  $('#portfolio-flters li').on( 'click', function() {
-    $("#portfolio-flters li").removeClass('filter-active');
-    $(this).addClass('filter-active');
+//   $('#portfolio-flters li').on( 'click', function() {
+//     $("#portfolio-flters li").removeClass('filter-active');
+//     $(this).addClass('filter-active');
 
-    portfolioIsotope.isotope({ filter: $(this).data('filter') });
-  })
-})
+//     portfolioIsotope.isotope({ filter: $(this).data('filter') });
+//   })
+// })
 
 // ===========================================================================
 // WA FLOATING BUTTON V2
@@ -91,6 +91,29 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     window.addEventListener('afterprint', function() {
-        document.querySelector('.floating-whatsapp').style.display = 'block';
+        document.querySelector('.floating-whatsapp').style.display = 'block'; 
     })
-})
+}) 
+
+// ===========================================================================
+// FAQ ACCORDION / YANG SERING DITANYAKAN
+// ==========================================================================
+document.addEventListener('DOMContentLoaded', function() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        
+        question.addEventListener('click', () => {
+            // Close all other items
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item && otherItem.classList.contains('active')) {
+                    otherItem.classList.remove('active');
+                }
+            });
+            
+            // Toggle current item
+            item.classList.toggle('active');
+        });
+    });
+});
