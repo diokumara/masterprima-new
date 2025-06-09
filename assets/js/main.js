@@ -113,29 +113,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }, 15);
         }
     })
-<<<<<<< HEAD
 });
-=======
-})
-
-// ========================================================================= //
-//  PORTFOLIO ISOTOPE AND FILTER
-// ========================================================================= //
-// $(window).load(function(){
-
-//   var portfolioIsotope = $('.portfolio-container').isotope({
-//     itemSelector: '.portfolio-thumbnail',
-//     layoutMode: 'fitRows'
-//   });
-
-//   $('#portfolio-flters li').on( 'click', function() {
-//     $("#portfolio-flters li").removeClass('filter-active');
-//     $(this).addClass('filter-active');
-
-//     portfolioIsotope.isotope({ filter: $(this).data('filter') });
-//   })
-// })
->>>>>>> 427dc8b4d00618eafa5085efbf8a99c227605572
 
 // ===========================================================================
 // WA FLOATING BUTTON
@@ -159,7 +137,6 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('beforeprint', function () {
         document.querySelector('.floating-whatsapp').style.display = 'none';
     });
-<<<<<<< HEAD
 
     window.addEventListener('afterprint', function () {
         document.querySelector('.floating-whatsapp').style.display = 'block';
@@ -175,23 +152,6 @@ document.addEventListener('DOMContentLoaded', function () {
     faqItems.forEach(item => {
         const question = item.querySelector('.faq-question');
 
-=======
-    
-    window.addEventListener('afterprint', function() {
-        document.querySelector('.floating-whatsapp').style.display = 'block'; 
-    })
-}) 
-
-// ===========================================================================
-// FAQ ACCORDION / YANG SERING DITANYAKAN
-// ==========================================================================
-document.addEventListener('DOMContentLoaded', function() {
-    const faqItems = document.querySelectorAll('.faq-item');
-    
-    faqItems.forEach(item => {
-        const question = item.querySelector('.faq-question');
-        
->>>>>>> 427dc8b4d00618eafa5085efbf8a99c227605572
         question.addEventListener('click', () => {
             // Close all other items
             faqItems.forEach(otherItem => {
@@ -199,11 +159,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     otherItem.classList.remove('active');
                 }
             });
-<<<<<<< HEAD
 
-=======
-            
->>>>>>> 427dc8b4d00618eafa5085efbf8a99c227605572
             // Toggle current item
             item.classList.toggle('active');
         });
