@@ -265,7 +265,7 @@ LOGIN MASUK / DAFTAR
 }
 
 /* ========================================
-WA FLOATING BUTTON V2
+WA FLOATING BUTTON
 ======================================== */
 /* Floating WhatsApp Button Styles */
 .floating-whatsapp {
@@ -931,81 +931,20 @@ BACKGROUND PAKET
     border-color: var(--c-brand);
 }
 
-/* ========================================
-PAKET (FILTER PAKET)
-======================================== */
+/*=============================
+PAKET (CARD / ISI)
+===============================*/
 .paket {
   padding: 10px 5px;
   background-color: var(--body-clr);
   border-radius: 10px;
-}
-.paket .button-group{
-  width: 100%;
-  padding: 3px 0%;
-  border-radius: 10px;
-  justify-self: center;
-  flex-wrap: wrap;
-}
-.button-group{
-  text-align: center;
-  margin-bottom: 40px;
-}
-.button-group .button{
-  display: inline-block;
-  padding: 10px 20px;
-  margin: 5px;
-  background-color: var(--c-brand-white);
-  color: var(--c-brand) ;
-  font-size: 15px;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: all 0.4s;
-  border: none;
-  border-radius: 5px;
-  outline: none;
-  cursor: pointer;
-}
-.button-group .button.active{
-  background-color: var(--c-brand);
-  color: var(--c-brand-white);
-}
-.button-group .button:hover{
-  background-color: var(--c-brand-blue);
-  color: var(--c-brand-white);
 }
 div.paketCard{
   width: 100%;
   display: flex;
   flex-wrap: wrap;
 } 
-div.paketCard .item{
-  position: static;
-}
-.item .ambil-paket {
-  background-color: var(--c-brand);
-  position: absolute;
-  bottom: -24px;
-  left: 50%;
-  width: calc(100% - 50px);
-  transform: translateX(-50%);
-  padding: 20px;
-  transition: var(--transition);
-  border-radius: 10px;
-  opacity: 0;
-}
-.item:hover .ambil-paket {
-  opacity: 1;
-  bottom: 24px;
-}
 
-/*=============================
-PAKET (CARD / ISI)
-===============================*/
-#paket{
-	background:#f9f9f9;
-	position:relative;
-}
 #paket .single-table {
   justify-self: center;
   text-align: center;
@@ -1283,7 +1222,6 @@ BREAKPOINTS / VIEWPORTS
     object-fit: cover;
     min-width: 90%;
     margin-bottom: 15px;
-    margin-inline: 1rem;
   }
 }
 
@@ -1336,7 +1274,6 @@ BREAKPOINTS / VIEWPORTS
     object-fit: cover;
     min-width: 90%;
     margin-bottom: 15px;
-    margin-inline: 1rem;
   }
   #pertanyaan h2 {
     font-size: larger;
@@ -1414,8 +1351,6 @@ BREAKPOINTS / VIEWPORTS
     object-fit: cover;
     min-width: 450px;
     margin-bottom: 15px;
-    top: 200px;
-    /* margin-inline: 1rem; */
   }
 }
 
@@ -1485,13 +1420,6 @@ BREAKPOINTS / VIEWPORTS
   }
 }
 
-@media (max-width: 1200px) {
-   /* PERTANYAAN / FAQ */
-  /* #pertanyaan img {
-    min-width: 100px;
-  } */
-}
-
 @media (max-width: 991.98px) {
   /* HEADER */
   .header h6 {
@@ -1550,7 +1478,7 @@ BREAKPOINTS / VIEWPORTS
     text-align: left;
   }
 
-   /* PERTANYAAN / FAQ */
+  /* PERTANYAAN / FAQ */
   #pertanyaan img {
     max-width: 100px;
   }
