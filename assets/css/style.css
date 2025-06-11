@@ -1059,7 +1059,6 @@ PERTANYAAN / FAQ
 #pertanyaan img {
   position: absolute;
   max-width: 100px;
-  margin-bottom: 15px;
 }
 #pertanyaan p {
   margin-inline: 1rem;
@@ -1125,6 +1124,7 @@ PERTANYAAN / FAQ
 .faq-answer a:hover {
     font-weight: 600;
     color: var(--c-brand);
+    text-decoration: underline;
 }
 
 /* Active State */
@@ -1420,6 +1420,13 @@ BREAKPOINTS / VIEWPORTS
   }
 }
 
+/* For 2K resolutions (2048 x 1152, 2048 x 1536) */
+@media screen and (min-width: 2048px) {
+  body {
+    zoom: 1.3;
+  }
+}
+
 @media (max-width: 991.98px) {
   /* HEADER */
   .header h6 {
@@ -1659,6 +1666,20 @@ BREAKPOINTS / VIEWPORTS
    /* PERTANYAAN / FAQ */
   #pertanyaan .pertanyaan-container {
     margin-top: 530px;
+  }
+}
+
+@media (max-width: 419.98px) {
+  /* PERTANYAAN / FAQ */
+  #pertanyaan .pertanyaan-container {
+    margin-top: 400px;
+  }
+}
+
+@media (max-width: 374.98px) {
+  /* PERTANYAAN / FAQ */
+  #pertanyaan .pertanyaan-container {
+    margin-top: 350px;
   }
 }
 
