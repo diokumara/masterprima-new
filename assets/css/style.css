@@ -1104,8 +1104,12 @@ PAKET (CARD / ISI)
 }
 
 /* ========================================
-PERTANYAAN / GABUNG JADI TENTOR
+PERTANYAAN / FAQ
 ======================================== */
+#pertanyaan .container {
+  position: relative;
+}
+
 #pertanyaan h1 b {
   color: var(--c-brand-blue)
 }
@@ -1114,21 +1118,13 @@ PERTANYAAN / GABUNG JADI TENTOR
   color: var(--c-brand);
 }
 #pertanyaan img {
-  object-fit: cover;
-  max-width: 70%;
+  position: absolute;
+  max-width: 100px;
   margin-bottom: 15px;
-  margin-inline: 1rem;
 }
 #pertanyaan p {
   margin-inline: 1rem;
   text-align: justify;
-}
-
-/* FAQ */
-.faq-container h1 {
-    text-align: center;
-    color: #2c3e50;
-    margin-bottom: 30px;
 }
 
 /* FAQ Item Styles */
@@ -1175,6 +1171,21 @@ PERTANYAAN / GABUNG JADI TENTOR
     font-size: 15px;  
     padding: 0 20px;
     margin: 15px 0;
+    list-style: circle;
+}
+.faq-answer li {
+    font-size: 15px;  
+    padding: 0 7px;
+    margin: 10px 25px;
+    list-style: circle;
+}
+.faq-answer a {
+    font-weight: 600;
+    color: var(--c-brand-blue);
+}
+.faq-answer a:hover {
+    font-weight: 600;
+    color: var(--c-brand);
 }
 
 /* Active State */
@@ -1188,7 +1199,7 @@ PERTANYAAN / GABUNG JADI TENTOR
     transform: rotate(180deg);
 }
 .faq-item.active .faq-answer {
-    max-height: 300px;
+    max-height: 1000px;
     padding: 0 0 15px 0;
 }
 
@@ -1401,9 +1412,10 @@ BREAKPOINTS / VIEWPORTS
   /* PERTANYAAN */
   #pertanyaan img {
     object-fit: cover;
-    min-width: 500px;
+    min-width: 450px;
     margin-bottom: 15px;
-    margin-inline: 1rem;
+    top: 200px;
+    /* margin-inline: 1rem; */
   }
 }
 
@@ -1473,6 +1485,13 @@ BREAKPOINTS / VIEWPORTS
   }
 }
 
+@media (max-width: 1200px) {
+   /* PERTANYAAN / FAQ */
+  /* #pertanyaan img {
+    min-width: 100px;
+  } */
+}
+
 @media (max-width: 991.98px) {
   /* HEADER */
   .header h6 {
@@ -1529,6 +1548,14 @@ BREAKPOINTS / VIEWPORTS
     margin-left: 20%;
     top: -70px;
     text-align: left;
+  }
+
+   /* PERTANYAAN / FAQ */
+  #pertanyaan img {
+    max-width: 100px;
+  }
+  #pertanyaan .pertanyaan-container {
+    margin-top: 520px;
   }
 }
 
@@ -1699,6 +1726,11 @@ BREAKPOINTS / VIEWPORTS
   #keunggulan .services .item .right-text {
     margin-left: 20%;
     top: -50px;
+  }
+
+   /* PERTANYAAN / FAQ */
+  #pertanyaan .pertanyaan-container {
+    margin-top: 530px;
   }
 }
 
