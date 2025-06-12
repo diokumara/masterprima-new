@@ -749,6 +749,7 @@ LAYANAN (INILAH YANG KAMI TAWARKAN)
     position: relative;
     overflow: hidden;
     z-index: 2;
+    background-color: var(--c-brand-white);
 }
 .layanan p {
     color: var(--c-body-2);
